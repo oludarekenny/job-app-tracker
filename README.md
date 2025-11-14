@@ -1,8 +1,4 @@
-<img width="1876" height="1031" alt="image" src="https://github.com/user-attachments/assets/3e804653-ff0d-4978-977c-baf3797b8eca" />
 
-
-
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9222a6e2-9248-4832-90ea-d08202a0461e" />
 
 
 # Job Application Tracker
@@ -38,8 +34,8 @@ A web-based application built with **Flask** and **SQLite/Azure SQL**, designed 
 Include screenshots or a GIF of your app in action.  
 Example:
 
-![Job Application Form](screenshots/form_page.png)  
-![Applications List](screenshots/view_page.png)
+![Job Application Form]<img width="1876" height="1031" alt="image" src="https://github.com/user-attachments/assets/3e804653-ff0d-4978-977c-baf3797b8eca" />
+![Applications List] <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9222a6e2-9248-4832-90ea-d08202a0461e" />
 
 ---
 
