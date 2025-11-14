@@ -53,3 +53,27 @@ Example:
    ```bash
    git clone https://github.com/oludarekenny/job-app-tracker.git
    cd job-app-tracker
+   
+2. Create a virtual environment:
+   python3 -m venv appvenv
+   source appvenv/bin/activate  # Linux/macOS
+
+3. pip install -r requirements.txt
+4. Run the app:
+   python3 app.py
+
+
+##**Usage**
+
+- Go to the home page to add a new application.
+
+- Navigate to the view page to see all submitted applications.
+
+- Use Edit to update application details.
+
+- Use Delete to remove an application.
+
+- Uploaded CVs are stored in the /uploads folder.
+
+   
+
