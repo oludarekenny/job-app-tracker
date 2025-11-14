@@ -1,0 +1,267 @@
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== Page Title ========== */
+h2 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 26px;
+  color: #222;
+  letter-spacing: 0.5px;
+}
+
+/* ========== Form Container ========== */
+form {
+  background: #fff;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 35px 45px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+
+/* ========== Labels and Inputs ========== */
+label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="file"],
+textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fafafa;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #007bff;
+  background-color: #fff;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* ========== Submit Button ========== */
+button {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+/* ========== Link (View Applications) ========== */
+a {
+  display: block;
+  text-align: center;
+  margin: 25px auto 40px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 600px) {
+  form {
+    padding: 25px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+}
+
+/* Table container */
+.table-container {
+  max-width: 95%;
+  margin: 30px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Table basics */
+table {
+  width: 100%;
+  border-collapse: collapse; /* ensures borders don’t double */
+  font-size: 14px;
+  border: 1px solid #ddd; /* outer border */
+}
+
+/* Header */
+thead {
+  background-color: #007bff;
+  color: white;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px 12px;
+  border: 1px solid #ddd; /* vertical & horizontal lines */
+}
+
+/* Hover effect */
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Header style */
+th {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+/* Links inside table */
+td a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive table */
+@media (max-width: 600px) {
+  table {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+}
+
+table button {
+  background-color: #dc3545; /* red for delete */
+  color: #fff;
+  border: none;
+  padding: 4px 8px;       /* small padding */
+  font-size: 12px;        /* smaller text */
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 2px;          /* small space between buttons */
+}
+
+table button:hover {
+  background-color: #c82333; /* darker red on hover */
+}
+
+table form button[type="submit"] {
+  display: inline-block;
+}
+
+table button.edit {
+  background-color: #007bff; /* blue for edit */
+}
+
+table button.edit:hover {
+  background-color: #0056b3;
+}
+
+/* Table inline forms */
+.table-action-form {
+  display: inline-block; /* keep forms side by side */
+  margin: 0;             /* no extra spacing */
+  padding: 0 0;
+}
+
+/* Table buttons (Delete/Edit) */
+.table-action-form button {
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin: 0 2px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Delete button style */
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+  transform: translateY(-1px);
+}
+
+/* Edit button style */
+.edit-btn {
+  background-color: #ffc107;
+  color: black;
+}
+
+.edit-btn:hover {
+  background-color: #e0a800;
+  transform: translateY(-1px);
+}
+
+
+/*Status Style*/
+
+.status-accepted {
+    background-color: #28a745; /* green */
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+.status-rejected {
+    background-color: #dc3545; /* red */
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    padding: 4px 8px;
+}

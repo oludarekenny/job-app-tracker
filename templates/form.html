@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Application Form</title>
+  <link rel="stylesheet" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+  <h2>Job Application Form</h2>
+  <form action="/" method="POST" enctype="multipart/form-data">
+    <label>date</label><input type="date" name="date_applied" required>
+    <label>Company Name:</label><input type="text" name="company" required>
+    <label>Role:</label><input type="text" name="role" required>
+    <label>Application Source:</label><input type="text" name="source">
+    <label>CV (PDF):</label><input type="file" name="cv" accept=".pdf">
+    <label>Stage 1:</label><input type="text" name="stage1">
+    <label>Stage 2:</label><input type="text" name="stage2">
+    <label>Stage 3:</label><input type="text" name="stage3">
+    <label>Status:</label>
+      <select name="status" required>
+        <option value="">Select status</option>
+        <option value="Pending">Pending</option>
+        <option value="Accepted">Accepted</option>
+        <option value="Rejected">Rejected</option>
+      </select>
+
+
+    <label>Comments:</label><textarea name="comments"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+  <a href="{{ url_for('view_applications') }}">View All Applications</a>
+</body>
+</html>

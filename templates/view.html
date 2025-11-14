@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Applications List</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h2>All Applications</h2>
+
+  <div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Company</th>
+        <th>Role</th>
+        <th>Source</th>
+        <th>CV</th>
+        <th>Stage 1</th>
+        <th>Stage 2</th>
+        <th>Stage 3</th>
+        <th>Status</th>
+        <th>Comments</th>
+        <th>Update</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for app in applications %}
+      <tr>
+        <td>{{ app.date_applied }}</td>
+        <td>{{ app.company_name }}</td>
+        <td>{{ app.role }}</td>
+        <td>{{ app.application_source }}</td>
+        <td>
+          {% if app.cv_filename %}
+            <a href="{{ url_for('static', filename='../uploads/' + app.cv_filename) }}">Download</a>
+          {% else %}
+            N/A
+          {% endif %}
+        </td>
+        <td>{{ app.stage1 }}</td>
+        <td>{{ app.stage2 }}</td>
+        <td>{{ app.stage3 }}</td>
+<td class="{% if app.status == 'Accepted' %}status-accepted{% elif app.status == 'Rejected' %}status-rejected{% endif %}">
+    {{ app.status }}
+</td>
+        <td>{{ app.comments }}</td>
+        <td>
+
+              <form class="table-action-form" action="{{ url_for('delete_application', app_id=app.id) }}" method="POST">
+                <button type="submit" class="delete-btn">Delete</button>
+              </form>
+              <form class="table-action-form" action="{{ url_for('edit_application', app_id=app.id) }}" method="GET">
+                <button type="submit" class="edit-btn">Edit</button>
+              </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <div>
+  <a href="{{ url_for('form') }}">Add New Application</a>
+</body>
+</html>
