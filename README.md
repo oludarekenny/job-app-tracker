@@ -58,9 +58,12 @@ Example:
    python3 -m venv appvenv
    source appvenv/bin/activate  # Linux/macOS
 
-3. pip install -r requirements.txt
+3. Install Dependencies:
+   pip install -r requirements.txt
+
 4. Run the app:
-   python3 app.py
+   python app.py
+
 
 
 ##**Usage**
